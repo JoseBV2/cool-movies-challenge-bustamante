@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { CircularProgress, Box } from '@mui/material';
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -10,7 +11,18 @@ const Home: NextPage = () => {
     router.push('/reviews');
   }, [router]);
 
-  return null;
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+      }}
+    >
+      <CircularProgress />
+    </Box>
+  );
 };
 
 export default Home;
