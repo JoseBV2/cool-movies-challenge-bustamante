@@ -1,0 +1,21 @@
+query AllMovieReviews {
+  allMovieReviews {
+    nodes {
+      id
+      nodeId
+      title
+      body
+      rating
+      movieByMovieId {
+        id
+        title
+        releaseDate
+        imgUrl
+      }
+      userByUserReviewerId {
+        id
+        name
+      }
+    }
+  }
+}
